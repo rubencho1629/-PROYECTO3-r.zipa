@@ -13,10 +13,6 @@
     }
   ],
   "env": {
-    "USER_DB": "@user_db",
-    "PASS_DB": "@pass_db",
-    "URL_DB": "@url_db",
-    "NAME_DB": "@name_db",
     "SECRET_KEY": "@secret_key"
   }
 }
