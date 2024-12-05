@@ -11,6 +11,8 @@ class Producto(db.Model):
     rentabilidad = db.Column(db.Float, nullable=True)
     costo_produccion = db.Column(db.Float, nullable=True)
     stock = db.Column(db.Integer, nullable=False, default=0)
-    stock_maximo = db.Column(db.Integer, nullable=False, default=100)  # Agrega este atributo
+    stock_maximo = db.Column(db.Integer, nullable=False, default=100)
+    usuario_id = db.Column(db.Integer, db.ForeignKey('usuarios.id'), nullable=False)  # Relación con Usuario
 
     base = db.relationship('Base', backref='productos')
+    usuario = db.relationship('Usuario', backref='productos')  # Relación con Usuario

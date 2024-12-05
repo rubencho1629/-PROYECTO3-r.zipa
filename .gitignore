@@ -61,3 +61,4 @@ yarn.lock
 app/static/css/
 app/static/js/
 app/static/images/
+database.db

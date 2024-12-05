@@ -10,10 +10,11 @@ def listar_productos():
             "nombre": producto.nombre,
             "precio": producto.precio,
             "base_id": producto.base_id,
-            "usuario_id": producto.usuario_id
+            "usuario_id": producto.usuario_id  # Accede correctamente a usuario_id
         }
         for producto in productos
     ])
+
 def consultar_producto_por_id(producto_id):
     producto = Producto.query.get(producto_id)
     if not producto:
